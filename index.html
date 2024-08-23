@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+  
+    <link rel="icon" type="image/png" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div
+      class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+    </div>
+
+    <!-- side Bar -->
+    <div class="side-nav-menu bg-black">
+      <div class="nav-tap d-flex flex-column justify-content-between">
+        <div class="nav-link text-white open-link p-3">
+          <ul class="list-unstyled overflow-hidden">
+            <li
+              onclick="displaySearchInput(),closeSideBar()"
+              class="py-2 position-relative cursor-pointer"
+            >
+              Search
+            </li>
+            <li
+              onclick="getCategories(),closeSideBar()"
+              class="py-2 position-relative cursor-pointer"
+            >
+              Categories
+            </li>
+            <li
+              onclick="getArea(),closeSideBar()"
+              class="py-2 position-relative cursor-pointer"
+            >
+              Area
+            </li>
+            <li
+              onclick="getIngredient(),closeSideBar()"
+              class="py-2 position-relative cursor-pointer"
+            >
+              Ingredients
+            </li>
+            <li
+              onclick="showContact(),closeSideBar()"
+              class="py-2 position-relative cursor-pointer"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer text-white p-3">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="footer">
+            <p>
+              Copyright Â© 2019 All Rights <br />
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="header-nav bg-white text-center text-center d-flex flex-column justify-content-between"
+      >
+        <img class="logo cursor-pointer pt-2" src="./image/logo.png" alt="" />
+        <i class="fa-solid fa-align-justify cursor-pointer fa-2x open-close"></i>
+        <div class="div">
+          <i class="fa-solid cursor-pointer fa-globe d-block"></i>
+          <i class="fa-duotone cursor-pointer fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- search  -->
+    <div class="container py-4" id="searchInput"></div>
+
+    <!-- All Initial Product -->
+    <div class="vh-100 position-relative">
+      <!-- Inner Loading Screen -->
+      <div
+        class="inner-loading-screen position-absolute top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+      >
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+      </div>
+
+      <!-- product -->
+      <div class="container py-4">
+        <div id="rowData" class="row g-3"></div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
