@@ -66,7 +66,7 @@ body {
   color: rgba(240, 248, 255, 0.59);
 }
 
- /* loading screen */
+/* loading screen */
 
 .loading-screen {
   z-index: 999;
@@ -137,15 +137,22 @@ body {
     width: 80%;
     margin-left: 60px;
   }
+  .search {
+    margin-left: 45px;
+  }
   .details {
-    width: 100%;
-    margin-left: 20px;
+    width: 90%;
+    font-size: 16px;
+    margin-left: 40px;
   }
   .instruction {
-    font-size: 24px;
+    font-size: 16px;
+  }
+  .contact {
+    margin-left: 30px;
   }
   .instruction-details {
-    width: 100%;
+    width: 90%;
     margin-left: 20px;
   }
 }

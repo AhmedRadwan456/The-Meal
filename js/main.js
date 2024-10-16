@@ -65,7 +65,7 @@ function displaySearchInput() {
         <div class="col-md-6">
           <input
            onkeyup="searchByName(this.value)"
-            class="form-control txt-color  bg-transparent text-white"
+            class="form-control txt-color my-4  w-75 bg-transparent text-white"
             type="text"
             placeholder="Search By Name"
           />
@@ -73,7 +73,7 @@ function displaySearchInput() {
         <div class="col-md-6">
           <input
           onkeyup="searchByFirstName(this.value)"
-            class="form-control txt-color  bg-transparent text-white"
+            class="form-control txt-color my-4 w-75  bg-transparent text-white"
             maxlength="1"
             type="text"
             placeholder="Search By First Letter" 
@@ -267,7 +267,7 @@ function displayDetails(meal) {
   }
 
   let cartona = `<div class="col-md-4 details text-white">
-  <div class="details">
+  <div class="">
           <img
             class="w-100 rounded-2"
             src=${meal.strMealThumb}
@@ -276,7 +276,7 @@ function displayDetails(meal) {
           <h1>${meal.strMeal}</h1>
           </div>
         </div>
-        <div class="col-md-8 text-white">
+        <div class="col-md-8 details text-white">
         <div class="instruction-details">
           <h3>Instructions</h3>
           <p class="instruction my-3">
@@ -312,7 +312,7 @@ function showContact() {
             <input
             id="nameInput"
              onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="text"
               placeholder="Enter Your Name"
             />
@@ -322,7 +322,7 @@ function showContact() {
             <input
             id="emailInput"
             onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="email"
               placeholder="Enter Your Email"
             />
@@ -332,7 +332,7 @@ function showContact() {
             <input
             id="phoneInput"
             onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="tel"
               placeholder="Enter Your Phone"
             />
@@ -342,7 +342,7 @@ function showContact() {
             <input
             id="ageInput"
             onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="number"
               placeholder="Enter Your Age"
             />
@@ -352,7 +352,7 @@ function showContact() {
             <input
             id="passwordInput"
             onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="password"
               placeholder="Enter Your Password"
             />
@@ -362,15 +362,15 @@ function showContact() {
             <input
             id="rePasswordInput"
             onkeyup="inputValidation()"
-              class="form-control"
+              class="form-control w-75"
               type="password"
               placeholder="Enter Your Repassword"
             />
             <div id="rePasswordAlert" class="alert alert-danger d-none mt-2">rePassword Is Vailed</div>
           </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center my-3">
-          <button disabled class="btn btn-outline-danger" id="btn1">Submit</button>
+        <div class="d-flex justify-content-center align-items-center my-3 ">
+          <button disabled class="btn btn-outline-danger w-50" id="btn1">Submit</button>
         </div>
       </div>
     </div>
@@ -524,9 +524,7 @@ function ageValidation() {
 }
 //Validation Password
 function passwordValidation() {
-  return /^[\w\.-]{6,}$/gm.test(
-    document.getElementById("passwordInput").value
-  );
+  return /^[\w\.-]{6,}$/gm.test(document.getElementById("passwordInput").value);
 }
 //Validation Repassword
 function rePasswordValidation() {
